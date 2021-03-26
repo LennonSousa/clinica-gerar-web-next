@@ -1,0 +1,210 @@
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { Container, Navbar, Nav, Row, Col, Modal, Button, Image } from 'react-bootstrap';
+import { FaWhatsapp, FaRegCalendarAlt } from 'react-icons/fa';
+
+import styles from '../styles/components/PageHeader.module.css';
+
+interface PageHeaderProps {
+    activeLink?: string;
+}
+
+const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
+    const [show, setShow] = useState(true);
+
+    const [showModalSchedule, setShowModalSchedule] = useState(false);
+
+    const handleClose = () => setShowModalSchedule(false);
+    const handleShow = () => setShowModalSchedule(true);
+
+    const navbarControl = () => {
+        if (window.scrollY > 300) {
+            setShow(false);
+        } else {
+            setShow(true);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', navbarControl);
+        return () => window.removeEventListener('scroll', navbarControl);
+    }, []);
+
+    return (
+        <>
+            <Navbar className={styles.navContainerTop} variant="dark" expand="lg">
+                <Container className={styles.navTopContainer}>
+                    <Navbar.Brand href="/">
+                        <img
+                            src="/assets/images/logo-horizontal-branco.svg"
+                            height="60"
+                            className="d-inline-block align-top"
+                            alt="Clínica Gerar"
+                        />
+                    </Navbar.Brand>
+
+                    <Navbar.Collapse className="justify-content-end">
+                        <Nav>
+                            <Row>
+                                <Col>
+                                    <Row>
+                                        <Col className={styles.navContactContainerLink}>
+                                            <Nav.Link href="https://api.whatsapp.com/send?phone=+5599991091718" target="_blank"><FaWhatsapp size={24} /> {` `} 99 99109-1718</Nav.Link>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col className={styles.navContactContainerText}>
+                                            Dr. Evaldo Reis Silva
+                                        </Col>
+                                    </Row>
+                                </Col>
+
+                                <Col>
+                                    <Row>
+                                        <Col className={styles.navContactContainerLink}>
+                                            <Nav.Link href="https://api.whatsapp.com/send?phone=+5599988090998" target="_blank"><FaWhatsapp size={24} /> {` `} 99 98809-0998</Nav.Link>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col className={styles.navContactContainerText}>
+                                            Dra. Cristina Célia Andrade
+                                        </Col>
+                                    </Row>
+                                </Col>
+
+                                <Col>
+                                    <Row>
+                                        <Col className={styles.navContactContainerLink}>
+                                            <Nav.Link onClick={handleShow} ><FaRegCalendarAlt size={24} /> {` `} Horário de atendimento</Nav.Link>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                            </Row>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+
+            <Navbar className={styles.navContainerBottom}
+                style={{
+                    backgroundColor: show ? 'rgba(0, 58, 60, 1)' : 'rgba(0, 58, 60, 0.8)',
+                    boxShadow: show ? 'none' : 'rgb(0 0 0 / 31%) 0px 4px 11px 2px'
+                }}
+                variant="dark"
+                expand="lg"
+                sticky="top"
+            >
+                <Container>
+                    <Navbar.Brand href="/" className={styles.navBrandBottom} style={{ top: show ? "-100%" : 10 }}>
+                        <img
+                            style={{ opacity: show ? 0 : 1 }}
+                            src="/assets/images/logo-horizontal-branco.svg"
+                            height="30"
+                            className="align-top"
+                            alt="Clínica Gerar"
+                        />
+                    </Navbar.Brand>
+
+                    <div className={styles.navBottomContainer}>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    </div>
+
+                    <Navbar.Collapse className="justify-content-center" id="basic-navbar-nav">
+                        <Nav>
+                            <Link href="/">
+                                <a className={`nav-link ${activeLink === "/" ? styles.navHeaderLinkActive : styles.navHeaderLink}`}>INÍCIO</a>
+                            </Link>
+                            <Link href="/about">
+                                <a className={`nav-link ${activeLink === "/about" ? styles.navHeaderLinkActive : styles.navHeaderLink}`}>SOBRE NÓS</a>
+                            </Link>
+                            <Link href="/our-services">
+                                <a className={`nav-link ${activeLink === "/our-services" ? styles.navHeaderLinkActive : styles.navHeaderLink}`}>NOSSOS SERVIÇOS</a>
+                            </Link>
+                            <Link href="/contact">
+                                <a className={`nav-link ${activeLink === "/contact" ? styles.navHeaderLinkActive : styles.navHeaderLink}`}>CONTATO</a>
+                            </Link>
+
+                            <div className={styles.navBottomLinksContainer}>
+                                <Row>
+                                    <Col className="mt-3" sm={4}>
+                                        <Row>
+                                            <Col className={styles.navContactContainerLink}>
+                                                <Nav.Link href="https://api.whatsapp.com/send?phone=+5599991091718" target="_blank"><FaWhatsapp size={24} /> {` `} 99 99109-1718</Nav.Link>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col className={styles.navContactContainerText}>
+                                                Dr. Evaldo Reis Silva
+                                        </Col>
+                                        </Row>
+                                    </Col>
+
+                                    <Col className="mt-3" sm={4}>
+                                        <Row>
+                                            <Col className={styles.navContactContainerLink}>
+                                                <Nav.Link href="https://api.whatsapp.com/send?phone=+5599988090998" target="_blank"><FaWhatsapp size={24} /> {` `} 99 98809-0998</Nav.Link>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col className={styles.navContactContainerText}>
+                                                Dra. Cristina Célia Andrade
+                                        </Col>
+                                        </Row>
+                                    </Col>
+
+                                    <Col className="mt-3" sm={4}>
+                                        <Row>
+                                            <Col className={styles.navContactContainerLink}>
+                                                <Nav.Link onClick={handleShow} ><FaRegCalendarAlt size={24} /> {` `} Horário de atendimento</Nav.Link>
+                                            </Col>
+                                        </Row>
+                                    </Col>
+                                </Row>
+                            </div>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+
+            <Modal show={showModalSchedule} onHide={handleClose}>
+                <Modal.Header>
+                    <Modal.Title style={{ color: "#003A3C", fontWeight: 600 }}>Nossos horários de funcionamento</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Row className="mt-4 mb-4 justify-content-center align-items-center text-center">
+                        <Col sm={5}>
+                            <Image fluid src="/assets/images/undraw_Work_time_re_hdyv.svg" alt="Horário de funcionamento" />
+                        </Col>
+
+                        <Col className="mt-5" sm={5}>
+                            <Row className="mb-2">
+                                <Col>
+                                    <h5 style={{ color: "#003A3C", fontWeight: 600 }}>De segunda a sexta.</h5>
+                                </Col>
+                            </Row>
+
+                            <Row>
+                                <Col>
+                                    <h6>Das 08h às 12h</h6>
+                                </Col>
+                            </Row>
+
+                            <Row>
+                                <Col>
+                                    <h6>e das 14h às 18h.</h6>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Fechar
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        </>
+    );
+}
+
+export default PageHeader;

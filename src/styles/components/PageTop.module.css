@@ -1,0 +1,45 @@
+.topHeader {
+    height: 450px;
+    position: relative;
+    background-size: cover;
+    background-position-x: center;
+}
+
+.topHeaderDiv{
+    height: 150px;
+    display: flex;
+    background-color: rgba(0, 58, 60, 0.7);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.topHeaderCol{
+    padding-top: 60px;
+}
+
+.topHeaderH1 {
+    color: #fff !important;
+    padding-left: 15px;
+    font-size: 6rem !important;
+}
+
+.topHeaderBackH1 {
+    color: #fff !important;
+}
+
+.topHeaderDivBottom{
+    height: 30px;
+    display: flex;
+    background-color: rgba(0, 58, 60, 0.7);
+    border-radius: 0px 0px 10px 10px;
+}
+
+@media (max-width: 768px) {
+    .topHeaderCol{
+        padding-top: 15px;
+    }
+
+    .topHeaderH1 {
+        font-size: 4rem !important;
+        line-height: 5rem;
+    }
+}

@@ -2,14 +2,35 @@
   "name": "clinica-gerar-next",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "bootstrap": "^4.6.0",
+    "emailjs-com": "^2.6.4",
+    "formik": "^2.2.6",
+    "js-cookie": "^2.2.1",
+    "leaflet": "^1.7.1",
     "next": "10.0.9",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-bootstrap": "^1.5.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.2.0",
+    "scrollreveal": "^4.0.9",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^5.0.12",
+    "@types/js-cookie": "^2.2.6",
+    "@types/leaflet": "^1.7.0",
+    "@types/node": "^14.14.36",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@types/react-leaflet": "^2.8.1",
+    "@types/scrollreveal": "^0.0.6",
+    "typescript": "^4.2.3"
   }
 }

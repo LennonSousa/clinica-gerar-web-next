@@ -1,0 +1,75 @@
+.navContainerTop {
+    background-color: #003A3C;
+}
+
+.navContainerTottom {
+    transition-duration: 0.4s;
+}
+
+.navBrandBottom {
+    position: absolute;
+    transition-duration: 0.4s;
+}
+
+.navHeaderLink {
+    font-weight: 200;
+    margin: 0 25px 0 25px;
+    font-size: 16px;
+}
+
+.navTopContainer {
+    border-bottom: 1px solid;
+    border-bottom-color: #0a484a;
+    padding-bottom: 1rem;
+    justify-content: center !important;
+}
+
+.navContactContainerLink {
+    margin: 0 25px 0 25px;
+    font-size: 14px;
+}
+
+.navContactContainerText {
+    font-weight: 200;
+    margin: 0 25px 0 25px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+.navHeaderLinkActive {
+    font-weight: 200;
+    margin: 0 25px 0 25px;
+    font-size: 16px;
+    border-bottom: #DAA7A6 5px solid;
+}
+
+.navBottomContainer {
+    width: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navBottomLinksContainer {
+    width: 100%;
+    display: none;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .navContainer {
+        background-color: rgba(0, 58, 60, 1);
+    }
+}
+
+@media (max-width: 992px) {
+    .navTopContainer {
+        display: none;
+    }
+    .navBottomContainer {
+        width: 100%;
+    }
+    .navBottomLinksContainer {
+        display: flex;
+    }
+}

@@ -1,0 +1,21 @@
+.serviceItemDiv {
+    display: flex;
+    box-shadow: 2px 2px 5px -4px #747474;
+    padding: 20px;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+}
+
+.serviceItemDiv:hover {
+    box-shadow: 2px 2px 9px -4px #747474;
+}
+
+.serviceItemColImg {
+    height: 200px;
+    text-align: center;
+}
+
+.serviceItemImg {
+    height: inherit;
+    border-radius: 5px;
+}

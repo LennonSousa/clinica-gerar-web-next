@@ -1,0 +1,19 @@
+{
+    "name": "Cl\u00ednica Gerar",
+    "short_name": "Cl\u00ednica Gerar",
+    "icons": [
+        {
+            "src": "android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#003a3c",
+    "background_color": "#003a3c",
+    "display": "standalone"
+}

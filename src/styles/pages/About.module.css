@@ -1,0 +1,41 @@
+.aboutHeader {
+    height: 450px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+.aboutHeaderDiv{
+    height: 150px;
+    display: flex;
+    background-color: rgba(0, 58, 60, 0.7);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.aboutHeaderH1 {
+    color: #fff !important;
+    padding-left: 15px;
+    font-size: 6rem !important;
+}
+
+.aboutHeaderBackH1 {
+    color: #fff !important;
+}
+
+.aboutArticleDiv{
+    height: 30px;
+    display: flex;
+    background-color: rgba(0, 58, 60, 0.7);
+    border-radius: 0px 0px 10px 10px;
+}
+
+@media (max-width: 768px) {
+    .aboutHeaderCol{
+        padding-top: 15px;
+    }
+
+    .aboutHeaderH1 {
+        font-size: 4rem !important;
+        line-height: 5rem;
+    }
+}
