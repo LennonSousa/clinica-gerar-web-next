@@ -6,7 +6,7 @@
     "start": "node server",
     "dev": "next dev",
     "build": "next build",
-    "postinstall": "yarn install && next build"
+    "postinstall": "next build"
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
