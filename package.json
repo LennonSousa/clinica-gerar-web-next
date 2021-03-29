@@ -1,11 +1,12 @@
 {
   "name": "clinica-gerar-next",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": true,
   "scripts": {
-    "start": "yarn install && next build && next start",
+    "start": "node server",
     "dev": "next dev",
-    "build": "next build"
+    "build": "next build",
+    "postinstall": "next build"
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
