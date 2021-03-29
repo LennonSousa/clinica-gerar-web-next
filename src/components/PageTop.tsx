@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import ScrollReveal from 'scrollreveal';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import styles from '../styles/components/PageTop.module.css';
@@ -11,11 +10,6 @@ interface PageHeaderProps {
 }
 
 const PageTop: React.FC<PageHeaderProps> = ({ backgroundImage, isBackgroundCenter, title }) => {
-    useEffect(() => {
-        ScrollReveal().reveal('.section-col-back', { delay: 375, duration: 1000, origin: 'left', distance: '50%' });
-        ScrollReveal().reveal('.article-header-col', { delay: 375, duration: 1000, origin: 'left', distance: '50%' });
-    }, []);
-
     return (
         <>
             <header className={styles.topHeader} style={{

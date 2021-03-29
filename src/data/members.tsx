@@ -1,14 +1,5 @@
 import { Member } from '../components/Members';
 
-import teamMember01 from '../assets/images/team-01.jpg';
-import teamMember02 from '../assets/images/team-02.jpg';
-
-import teamMemberCover01 from '../assets/images/team-01-cover.jpg';
-import teamMemberCover02 from '../assets/images/team-02-cover.jpg';
-
-import teamMemberArticle01 from '../assets/images/team-01-article.jpg';
-import teamMemberArticle02 from '../assets/images/team-02-article.jpg';
-
 export const members: Member[] = [
     {
         id: 0,
@@ -25,9 +16,9 @@ export const members: Member[] = [
         treatments: 'Menopausa, Endometriose, Distúrbios Menstruais, Mioma, Síndrome Do Ovário Policístico, Cistos Ovarianos, HPV, Complicações Na Gravidez, ' +
         'Gravidez de risco, Infertilidade, Cirurgia Ginecológica Minimamente Invasiva.',
         university: 'Universidade Federal do Maranhão - CRM/MA: 2123 RQE: 1466',
-        image: teamMember01,
-        cover: teamMemberCover01,
-        articleImage: teamMemberArticle01,
+        image: '/assets/images/team-01.jpg',
+        cover: '/assets/images/team-01-cover.jpg',
+        articleImage: '/assets/images/team-01-article.jpg',
         url: 'dr-evaldo'
     },
     {
@@ -41,9 +32,9 @@ export const members: Member[] = [
         'Obstetrícia, Calendário vacinal da mulher, Implantes Hormonais, Síndrome dos ovários policísticos, Disturbios hormonais, Implantes hormonais, Gestação de Alto Risco, ' +
         'Osteoporose, Abortamento habitual, Puberdade precoce e Tardia, Lesões precursoras do câncer de colo uterino.',
         university: 'Universidade Federal do Maranhão - CRM/MA 2236  RQE: 1465',
-        image: teamMember02,
-        cover: teamMemberCover02,
-        articleImage: teamMemberArticle02,
+        image: '/assets/images/team-02.jpg',
+        cover: '/assets/images/team-02-cover.jpg',
+        articleImage: '/assets/images/team-02-article.jpg',
         url: 'dra-cristina'
     }
 ];

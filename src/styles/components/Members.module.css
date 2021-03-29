@@ -1,4 +1,4 @@
-.member-container {
+.memberContainer {
     height: 650px;
     padding: 15px;
     justify-content: space-between;
@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-.member-item {
+.memberItem {
     height: 100%;
     width: 90%;
     cursor: default;
@@ -17,70 +17,71 @@
     transition-duration: 0.4s;
 }
 
-.member-item:hover {
+.memberItem:hover {
     margin-top: -5px;
     -webkit-box-shadow: 0 8px 6px -6px #747474;
     -moz-box-shadow: 0 8px 6px -6px #747474;
     box-shadow: 0 8px 6px -6px #747474;
 }
 
-.member-image-col{
+.memberImageCol{
     height: 100%;
 }
 
-.member-image-row{
+.memberImageRow{
     height: 50%;
 }
 
-.member-image {
+.memberImage {
     height: 80%;
     border-radius: 50%;
     opacity: 0.9;
     transition-duration: 0.4s;
 }
 
-.member-item:hover .member-image {
+.memberItem:hover .memberImage {
     -webkit-box-shadow: 0 8px 6px -6px #747474;
     -moz-box-shadow: 0 8px 6px -6px #747474;
     box-shadow: 0 8px 6px -6px #747474;
     opacity: 1;
 }
 
-.member-description-row{
+.memberDescriptionRow{
     height: 35%;
 }
 
-.member-title {
+.memberTitle {
     font: 700 22px Nunito, sans-serif;
     color: #003A3C;
 }
 
-.member-sub-title {
+.memberSubTitle {
     font: 400 16px Nunito, sans-serif;
     color: #969696;
 }
 
-.member-button-row{
+.memberButtonRow{
     height: 15%;
+    align-items: center;
 }
 
-.member-button-row a {
+.memberButtonRow a {
     color: #DAA7A6;
     display: block;
     text-decoration: none;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
 
-.member-button-row a:hover {
+.memberButtonRow a:hover {
     color: #be8887;
 }
 
 @media (max-width: 1200px) {
-    .member-container {
+    .memberContainer {
         height: 450px;
     }
 
-    .member-item {
+    .memberItem {
         width: 100%;
     }
 }

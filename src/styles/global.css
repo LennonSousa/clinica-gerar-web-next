@@ -33,8 +33,9 @@ a {
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     text-decoration: none;
+    color: #006366;
 }
 
 h1 {
@@ -44,25 +45,29 @@ h1 {
 }
 
 h4, h5 {
-    color:#a7a7a7 !important;
+    color: #a7a7a7 !important;
 }
 
-.article-header-col{
+.carousel-indicators {
+    bottom: 20px !important;
+}
+
+.article-header-col {
     padding-top: 60px;
     z-index: 999;
 }
 
-.article-title{
+.article-title {
     font: 400 2rem Nunito, sans-serif;
     color: #DAA7A6;
 }
 
-.article-sub-title{
+.article-sub-title {
     font: 600 1.5rem Nunito, sans-serif;
     color: #003A3C;
 }
 
-.article-text{
+.article-text {
     font: 400 1rem Nunito, sans-serif;
     color: #757575;
     line-height: 1.9rem;
@@ -92,8 +97,8 @@ h4, h5 {
     max-width: 1320px;
     white-space: normal!important;
     width: 100%;
-    padding-right: var(--bs-gutter-x,.75rem);
-    padding-left: var(--bs-gutter-x,.75rem);
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
     margin-right: auto;
     margin-left: auto;
 }
@@ -157,18 +162,20 @@ h4, h5 {
     }
 }
 
-@media (min-width: 768px)  and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
     .section-col-back {
         max-width: 720px;
     }
 }
 
 @media (max-width: 767px) {
+    .carousel-indicators {
+        bottom: 0px !important;
+    }
     .section-col-back {
         max-width: 540px;
     }
-
-    .article-header-col{
+    .article-header-col {
         padding-top: 15px;
     }
 }
