@@ -3,7 +3,7 @@
   "version": "0.1.5",
   "private": true,
   "scripts": {
-    "start": "node server",
+    "start": "next start",
     "dev": "next dev",
     "build": "next build",
     "postinstall": "next build"
