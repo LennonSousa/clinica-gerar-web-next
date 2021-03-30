@@ -25,7 +25,7 @@ app.prepare().then(() => {
 
     server.get('*', (req, res) => handle(req, res));
 
-    app.listen(configs.port, () => {
+    server.listen(configs.port, () => {
         console.log(`Escutando na ${configs.port}!`);
     });
 })
