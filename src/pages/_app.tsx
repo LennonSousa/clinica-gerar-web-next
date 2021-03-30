@@ -23,14 +23,4 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-export default MyApp
-
-export const getServerSideProps = async ({ req, res, next }) => {
-  if (res) {
-    console.log(res)
-    if ((req.headers["x-forwarded-proto"] || "").endsWith("http")) //Checa se o protocolo informado nos headers é HTTP
-      res.redirect(`https://${req.headers.host}${req.url}`); //Redireciona pra HTTPS
-    else //Se a requisição já é HTTPS
-      next();
-  }
-}
+export default MyApp;
