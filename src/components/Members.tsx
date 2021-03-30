@@ -46,7 +46,6 @@ const Members: React.FC<MembersProps> = ({ member }) => {
                                 query: { member: member.url },
 
                             }}
-                            as={`/member/${member.url}`}
                         >
                             <a>
                                 Conhecer mais <FaUserMd size={20} />

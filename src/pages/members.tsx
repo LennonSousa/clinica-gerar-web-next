@@ -10,7 +10,7 @@ import membersList from '../data/members';
 
 function Members() {
     const router = useRouter();
-    const [member, setMember] = useState<Member>()
+    const [member, setMember] = useState<Member>();
 
     useEffect(() => {
         const memberFound = membersList.find(item => { return item.url === router.query.member });

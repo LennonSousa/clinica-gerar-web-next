@@ -225,8 +225,7 @@ export default function Home() {
           <Row>
             <Col className={`${styles.newsArticleButton} pt-4`}>
               <Link
-                href='/Articles/endometriose'
-                as="/articles/endometriose"
+                href='/articles/endometriose'
               >
                 <a>
                   Saber mais <FaArrowRight size={18} />

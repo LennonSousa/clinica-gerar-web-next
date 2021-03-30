@@ -4,10 +4,6 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 import { FaArrowRight } from 'react-icons/fa';
 
 function Page404() {
-    useEffect(() => {
-
-    }, []);
-
     return (
         <article>
             <Container>
