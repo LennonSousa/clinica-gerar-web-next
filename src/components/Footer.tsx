@@ -37,7 +37,7 @@ function Footer() {
                                     /> @clinicagerar</h6></a>
 
                                 <a
-                                    className={styles.footerTectionText}
+                                    className={styles.footerSectionText}
                                     href="https://www.instagram.com/clinicagerar/"
                                     target="_blank"
                                     rel="noreferrer"
@@ -46,7 +46,7 @@ function Footer() {
                                     /> Clinica Gerar Imperatriz</h6></a>
 
                                 <a
-                                    className={styles.footerTectionText}
+                                    className={styles.footerSectionText}
                                     href="https://api.whatsapp.com/send?phone=+5599991091718"
                                     target="_blank"
                                     rel="noreferrer"
