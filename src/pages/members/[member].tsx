@@ -2,18 +2,20 @@ import { useEffect, useState } from 'react';
 import { useRouter } from "next/router";
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
-import PageTop from '../components/PageTop';
-import { Member } from '../components/Members';
+import PageTop from '../../components/PageTop';
+import { Member } from '../../components/Members';
 
 // Datas
-import membersList from '../data/members';
+import membersList from '../../data/members';
 
 function Members() {
     const router = useRouter();
     const [member, setMember] = useState<Member>();
 
     useEffect(() => {
-        const memberFound = membersList.find(item => { return item.url === router.query.member });
+        const { member } = router.query;
+
+        const memberFound = membersList.find(item => { return item.url === member });
 
         if (memberFound) {
             setMember(memberFound);

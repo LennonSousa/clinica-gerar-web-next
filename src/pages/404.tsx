@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Link from 'next/link';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import { FaArrowRight } from 'react-icons/fa';

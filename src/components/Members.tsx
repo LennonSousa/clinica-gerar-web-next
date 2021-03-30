@@ -41,11 +41,7 @@ const Members: React.FC<MembersProps> = ({ member }) => {
                 <Row className={styles.memberButtonRow}>
                     <Col>
                         <Link
-                            href={{
-                                pathname: '/members/',
-                                query: { member: member.url },
-
-                            }}
+                            href={`/members/${member.url}`}
                         >
                             <a>
                                 Conhecer mais <FaUserMd size={20} />
