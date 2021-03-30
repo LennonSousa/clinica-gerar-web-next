@@ -15,15 +15,17 @@ const configs = {
 app.prepare().then(() => {
     const server = express();
 
-    if (configs.forcarHTTPS) //Se o redirecionamento HTTP estiver habilitado, registra o middleware abaixo
-        server.use((req, res, next) => { //Cria um middleware onde todas as requests passam por ele
-            if ((req.headers["x-forwarded-proto"] || "").endsWith("http")) { //Checa se o protocolo informado nos headers é HTTP
-                res.redirect(`https://${req.headers.host}${req.url}`); //Redireciona pra HTTPS
-                return;
-            }
+    server.use((req, res, next) => {
+        const hostname = req.hostname === 'www.clinicageraritz.com.br' ? 'clinicageraritz.com.br' : req.hostname;
 
-            next();
-        });
+        if (req.headers['x-forwarded-proto'] === 'http' || req.hostname === 'www.clinicageraritz.com.br') {
+            res.redirect(301, `https://${hostname}${req.url}`);
+            return;
+        }
+
+        res.setHeader('strict-transport-security', 'max-age=31536000; includeSubDomains; preload');
+        next();
+    });
 
     server.get('*', (req, res) => handle(req, res));
 
