@@ -335,9 +335,9 @@ export default function Home() {
         </Modal.Header>
         <Modal.Body>
           <Row className="mt-4 mb-4 justify-content-center align-items-center text-center">
-            <Col sm={5}>
+            <Col sm={5} className="mb-3">
               <Row className="justify-content-center mb-2">
-                <Col sm={8}>
+                <Col className="col-8">
                   <Image src="/assets/images/team-01.jpg" alt="Marcar uma consulta com o Dr. Evaldo Reis Silva" fluid roundedCircle />
                 </Col>
               </Row>
@@ -364,9 +364,9 @@ export default function Home() {
               </Row>
             </Col>
 
-            <Col sm={5}>
+            <Col sm={5} className="mb-3">
               <Row className="justify-content-center mb-2">
-                <Col sm={8}>
+                <Col className="col-8">
                   <Image src="/assets/images/team-02.jpg" alt="Marcar uma consulta com a Dra. Cristina Célia Andrade" fluid roundedCircle />
                 </Col>
               </Row>
