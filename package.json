@@ -1,9 +1,9 @@
 {
   "name": "clinica-gerar-next",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": true,
   "scripts": {
-    "start": "node server",
+    "start": "NODE_ENV=production node server",
     "dev": "next dev",
     "build": "next build",
     "postinstall": "next build"
