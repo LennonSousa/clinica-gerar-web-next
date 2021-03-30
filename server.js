@@ -17,10 +17,10 @@ app.prepare().then(() => {
 
     if (configs.forcarHTTPS) //Se o redirecionamento HTTP estiver habilitado, registra o middleware abaixo
         server.use((req, res, next) => { //Cria um middleware onde todas as requests passam por ele
-            if ((req.headers["x-forwarded-proto"] || "").endsWith("http")) //Checa se o protocolo informado nos headers é HTTP
+            if ((req.headers["x-forwarded-proto"] || "").endsWith("http")){ //Checa se o protocolo informado nos headers é HTTP
                 res.redirect(`https://${req.headers.host}${req.url}`); //Redireciona pra HTTPS
-            else //Se a requisição já é HTTPS
-                next(); //Não precisa redirecionar, passa para os próximos middlewares que servirão com o conteúdo desejado
+                return;
+            }
         });
 
     server.get('*', (req, res) => handle(req, res));
