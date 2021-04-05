@@ -272,6 +272,7 @@ export default function Home() {
               style={{ width: '100%', minHeight: 500, border: 0 }}
               allowFullScreen={false}
               loading="lazy"
+              title="Mapa"
             ></iframe>
           </Row>
         </Container>
@@ -370,11 +371,11 @@ export default function Home() {
                   {
                     modalScheduleMode === "on-line" ? <button className="button-standard" onClick={(e) => {
                       e.preventDefault();
-                      window.open('https://www.doctoralia.com.br/z/EAPEkA', '_blank');
+                      window.open('https://www.doctoralia.com.br/z/EAPEkA', '_blank', 'noopener,noreferrer');
                     }} type="button">Agendar agora</button> :
                       <button className="button-standard" onClick={(e) => {
                         e.preventDefault();
-                        window.open('https://api.whatsapp.com/send?phone=+5599991091718', '_blank');
+                        window.open('https://api.whatsapp.com/send?phone=+5599991091718', '_blank', 'noopener,noreferrer');
                       }} type="button">Whatsapp</button>
                   }
                 </Col>
@@ -399,11 +400,11 @@ export default function Home() {
                   {
                     modalScheduleMode === "on-line" ? <button className="button-standard" onClick={(e) => {
                       e.preventDefault();
-                      window.open('https://www.doctoralia.com.br/cristina-celia-andrade-alves/ginecologista/imperatriz', '_blank');
+                      window.open('https://www.doctoralia.com.br/cristina-celia-andrade-alves/ginecologista/imperatriz', '_blank', 'noopener,noreferrer');
                     }} type="button">Agendar agora</button> :
                       <button className="button-standard" onClick={(e) => {
                         e.preventDefault();
-                        window.open('https://api.whatsapp.com/send?phone=+5599988090998', '_blank');
+                        window.open('https://api.whatsapp.com/send?phone=+5599988090998', '_blank', 'noopener,noreferrer');
                       }} type="button">Whatsapp</button>
                   }
                 </Col>

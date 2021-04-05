@@ -27,7 +27,7 @@ const Members: React.FC<MembersProps> = ({ member }) => {
             <div className={`${styles.memberItem} pt-3 pb-3`}>
                 <Row className={styles.memberImageRow}>
                     <Col className={styles.memberImageCol}>
-                        <Image fluid className={styles.memberImage} src={member.image} />
+                        <Image fluid className={styles.memberImage} alt={member.title} src={member.image} />
                     </Col>
                 </Row>
 

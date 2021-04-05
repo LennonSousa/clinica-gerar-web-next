@@ -34,22 +34,23 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
         <>
             <Navbar className={styles.navContainerTop} variant="dark" expand="lg">
                 <Container className={styles.navTopContainer}>
-                    <Navbar.Brand href="/">
-                        <img
-                            src="/assets/images/logo-horizontal-branco.svg"
-                            height="60"
-                            className="d-inline-block align-top"
-                            alt="Clínica Gerar"
-                        />
-                    </Navbar.Brand>
-
+                    <Link href="/">
+                        <Navbar.Brand>
+                            <img
+                                src="/assets/images/logo-horizontal-branco.svg"
+                                height="60"
+                                className="d-inline-block align-top"
+                                alt="Clínica Gerar"
+                            />
+                        </Navbar.Brand>
+                    </Link>
                     <Navbar.Collapse className="justify-content-end">
                         <Nav>
                             <Row>
                                 <Col>
                                     <Row>
                                         <Col className={styles.navContactContainerLink}>
-                                            <Nav.Link href="https://api.whatsapp.com/send?phone=+5599991091718" target="_blank"><FaWhatsapp size={24} /> {` `} 99 99109-1718</Nav.Link>
+                                            <Nav.Link href="https://api.whatsapp.com/send?phone=+5599991091718" rel="noopener noreferrer" target="_blank"><FaWhatsapp size={24} /> {` `} 99 99109-1718</Nav.Link>
                                         </Col>
                                     </Row>
                                     <Row>
@@ -62,7 +63,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                                 <Col>
                                     <Row>
                                         <Col className={styles.navContactContainerLink}>
-                                            <Nav.Link href="https://api.whatsapp.com/send?phone=+5599988090998" target="_blank"><FaWhatsapp size={24} /> {` `} 99 98809-0998</Nav.Link>
+                                            <Nav.Link href="https://api.whatsapp.com/send?phone=+5599988090998" rel="noopener noreferrer" target="_blank"><FaWhatsapp size={24} /> {` `} 99 98809-0998</Nav.Link>
                                         </Col>
                                     </Row>
                                     <Row>
@@ -95,15 +96,17 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                 sticky="top"
             >
                 <Container>
-                    <Navbar.Brand href="/" className={styles.navBrandBottom} style={{ top: show ? "-100%" : 10 }}>
-                        <img
-                            style={{ opacity: show ? 0 : 1 }}
-                            src="/assets/images/logo-horizontal-branco.svg"
-                            height="30"
-                            className="align-top"
-                            alt="Clínica Gerar"
-                        />
-                    </Navbar.Brand>
+                    <Link href="/">
+                        <Navbar.Brand href="/" className={styles.navBrandBottom} style={{ top: show ? "-100%" : 10 }}>
+                            <img
+                                style={{ opacity: show ? 0 : 1 }}
+                                src="/assets/images/logo-horizontal-branco.svg"
+                                height="30"
+                                className="align-top"
+                                alt="Clínica Gerar"
+                            />
+                        </Navbar.Brand>
+                    </Link>
 
                     <div className={styles.navBottomContainer}>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -129,7 +132,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                                     <Col className="mt-3" sm={4}>
                                         <Row>
                                             <Col className={styles.navContactContainerLink}>
-                                                <Nav.Link href="https://api.whatsapp.com/send?phone=+5599991091718" target="_blank"><FaWhatsapp size={24} /> {` `} 99 99109-1718</Nav.Link>
+                                                <Nav.Link href="https://api.whatsapp.com/send?phone=+5599991091718" rel="noopener noreferrer" target="_blank"><FaWhatsapp size={24} /> {` `} 99 99109-1718</Nav.Link>
                                             </Col>
                                         </Row>
                                         <Row>
@@ -142,7 +145,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                                     <Col className="mt-3" sm={4}>
                                         <Row>
                                             <Col className={styles.navContactContainerLink}>
-                                                <Nav.Link href="https://api.whatsapp.com/send?phone=+5599988090998" target="_blank"><FaWhatsapp size={24} /> {` `} 99 98809-0998</Nav.Link>
+                                                <Nav.Link href="https://api.whatsapp.com/send?phone=+5599988090998" rel="noopener noreferrer" target="_blank"><FaWhatsapp size={24} /> {` `} 99 98809-0998</Nav.Link>
                                             </Col>
                                         </Row>
                                         <Row>
@@ -198,7 +201,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                     </Row>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                    <Button variant="secondary" title="Fechar" onClick={handleClose}>
                         Fechar
                     </Button>
                 </Modal.Footer>

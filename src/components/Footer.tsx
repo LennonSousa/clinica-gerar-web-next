@@ -31,7 +31,7 @@ function Footer() {
                                     className={styles.footerSectionText}
                                     href="https://www.instagram.com/clinicagerar/"
                                     target="_blank"
-                                    rel="noreferrer"
+                                    rel="noopener noreferrer"
                                 >
                                     <h6><FaInstagram size={24}
                                     /> @clinicagerar</h6></a>
@@ -40,7 +40,7 @@ function Footer() {
                                     className={styles.footerSectionText}
                                     href="https://www.instagram.com/clinicagerar/"
                                     target="_blank"
-                                    rel="noreferrer"
+                                    rel="noopener noreferrer"
                                 >
                                     <h6><FaFacebookSquare size={24}
                                     /> Clinica Gerar Imperatriz</h6></a>
@@ -49,7 +49,7 @@ function Footer() {
                                     className={styles.footerSectionText}
                                     href="https://api.whatsapp.com/send?phone=+5599991091718"
                                     target="_blank"
-                                    rel="noreferrer"
+                                    rel="noopener noreferrer"
                                 >
                                     <h6><FaWhatsapp size={24}
                                     /> 99 98798-4898</h6></a>
