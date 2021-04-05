@@ -3,7 +3,7 @@
   "version": "0.2.2",
   "private": true,
   "scripts": {
-    "start": "NODE_ENV=production yarn install node server",
+    "start": "NODE_ENV=production yarn install",
     "dev": "next dev",
     "build": "next build",
     "postinstall": "next build"
