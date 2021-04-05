@@ -1,0 +1,10 @@
+# Group 1
+User-agent: *
+Disallow: /404.html
+Disallow: /500.html 
+
+# Group 2
+User-agent: *
+Allow: /
+
+Sitemap: http://www.example.com/sitemap.xml
