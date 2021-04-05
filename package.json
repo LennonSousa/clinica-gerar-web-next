@@ -1,6 +1,6 @@
 {
   "name": "clinica-gerar-next",
-  "version": "0.1.12",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
     "start": "NODE_ENV=production node server",
