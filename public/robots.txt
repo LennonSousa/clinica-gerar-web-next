@@ -7,4 +7,4 @@ Disallow: /500.html
 User-agent: *
 Allow: /
 
-Sitemap: http://www.example.com/sitemap.xml
+Sitemap: https://clinicageraritz.com.br/sitemap.xml
