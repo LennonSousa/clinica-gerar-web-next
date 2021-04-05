@@ -46,13 +46,13 @@ export const slides: VisitUsSlide[] = [
         id: 6,
         title: 'Corredores',
         description: 'Tudo feito com muito carinho para você.',
-        cover: '/assets/images/visit-us/recepcao.jpg',
+        cover: '/assets/images/visit-us/corredor.jpg',
     },
     {
         id: 7,
         title: 'Sala de espera',
         description: 'Aqui o atendimento é rápido e você espera tranquilo.',
-        cover: '/assets/images/visit-us/corredor.jpg',
+        cover: '/assets/images/visit-us/recepcao.jpg',
     },
     {
         id: 8,

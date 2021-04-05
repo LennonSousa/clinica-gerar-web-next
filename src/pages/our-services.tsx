@@ -1,13 +1,46 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
+import { NextSeo, BreadcrumbJsonLd } from 'next-seo';
 
 import PageTop from '../components/PageTop';
 
-import styles from  '../styles/pages/OurServices.module.css';
+import styles from '../styles/pages/OurServices.module.css';
 
 function ServicesPage() {
     return (
         <>
+            <NextSeo
+                title="Clínica Gerar | Nossos Serviços"
+                description="Somos especialistas em Obstetrícia, Ginecologia e Reprodução Humana Assistida."
+                openGraph={{
+                    url: 'https://clinicageraritz.com.br/our-services',
+                    title: 'Clínica Gerar | Nossos Serviços',
+                    description: 'Somos especialistas em Obstetrícia, Ginecologia e Reprodução Humana Assistida.',
+                    images: [
+                        {
+                            url: 'https://clinicageraritz.com.br/assets/images/services-cover.jpg',
+                            alt: 'Og Image Alt',
+                        },
+                        { url: 'https://clinicageraritz.com.br/assets/images/services-cover.jpg' },
+                    ],
+                }}
+            />
+
+            <BreadcrumbJsonLd
+                itemListElements={[
+                    {
+                        position: 1,
+                        name: 'Início',
+                        item: 'https://clinicageraritz.com.br',
+                    },
+                    {
+                        position: 2,
+                        name: 'Nossos serviços',
+                        item: 'https://clinicageraritz.com.br/our-services',
+                    },
+                ]}
+            />
+
             <PageTop backgroundImage="/assets/images/services-cover.jpg" isBackgroundCenter title="Nossos serviços" />
 
             <article>
@@ -109,9 +142,9 @@ function ServicesPage() {
 
                                                 <Row>
                                                     <Col className="article-text">
-                                                        <p>A ultrassonografia (ou ecografia) é um método inócuo e relativamente barato de produzir em tempo real 
-                                                            imagens em movimento das estruturas e órgãos do interior do corpo. Em virtude de ser um exame de realização 
-                                                            muito simples, costuma ser usado para fins preventivos, diagnósticos ou como acompanhamento de tratamentos.
+                                                        <p>A ultrassonografia (ou ecografia) é um método inócuo e relativamente barato de produzir em tempo real
+                                                        imagens em movimento das estruturas e órgãos do interior do corpo. Em virtude de ser um exame de realização
+                                                        muito simples, costuma ser usado para fins preventivos, diagnósticos ou como acompanhamento de tratamentos.
                                                         </p>
                                                     </Col>
                                                 </Row>
@@ -138,10 +171,10 @@ function ServicesPage() {
 
                                                 <Row>
                                                     <Col className="article-text">
-                                                        <p>Nossa função é de ser um complemento para a atividade do obstetra. Uma vez que a doença é 
-                                                            diagnosticada a partir do pré-natal, ou há suspeita de uma condição de anomalia, é importante ter 
-                                                            um médico especializado no assunto. Há também a possibilidade da avaliação da parte genética, que 
-                                                            é realizada por um geneticista
+                                                        <p>Nossa função é de ser um complemento para a atividade do obstetra. Uma vez que a doença é
+                                                        diagnosticada a partir do pré-natal, ou há suspeita de uma condição de anomalia, é importante ter
+                                                        um médico especializado no assunto. Há também a possibilidade da avaliação da parte genética, que
+                                                        é realizada por um geneticista
                                                             </p>
                                                     </Col>
                                                 </Row>

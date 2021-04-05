@@ -1,13 +1,44 @@
 import { Container, Row, Col, Image } from 'react-bootstrap';
+import { NextSeo, BreadcrumbJsonLd } from 'next-seo';
 
 import PageTop from '../components/PageTop';
-
-import styles from '../styles/pages/About.module.css';
 
 function About() {
 
     return (
         <>
+            <NextSeo
+                title="Clínica Gerar | Sobre nós"
+                description="Somos especialistas em Obstetrícia, Ginecologia e Reprodução Humana Assistida."
+                openGraph={{
+                    url: 'https://clinicageraritz.com.br/contact',
+                    title: 'Clínica Gerar | Sobre nós',
+                    description: 'Somos especialistas em Obstetrícia, Ginecologia e Reprodução Humana Assistida.',
+                    images: [
+                        {
+                            url: 'https://clinicageraritz.com.br/assets/images/capa-sobre.jpg',
+                            alt: 'Clínica Gerar Contato',
+                        },
+                        { url: 'https://clinicageraritz.com.br/assets/images/capa-sobre.jpg' },
+                    ],
+                }}
+            />
+
+            <BreadcrumbJsonLd
+                itemListElements={[
+                    {
+                        position: 1,
+                        name: 'Início',
+                        item: 'https://clinicageraritz.com.br',
+                    },
+                    {
+                        position: 2,
+                        name: 'Sobre nós',
+                        item: 'https://clinicageraritz.com.br/about',
+                    },
+                ]}
+            />
+
             <PageTop backgroundImage="/assets/images/capa-sobre.jpg" isBackgroundCenter title="Sobre nós" />
 
             <article>

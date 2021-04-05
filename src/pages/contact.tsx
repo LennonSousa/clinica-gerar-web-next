@@ -4,6 +4,7 @@ import { FaMapSigns, FaPhoneAlt, FaRegEnvelope, FaWhatsapp, FaRegPaperPlane } fr
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
+import { NextSeo, BreadcrumbJsonLd } from 'next-seo';
 
 import PageTop from '../components/PageTop';
 
@@ -27,6 +28,38 @@ function Contact() {
 
     return (
         <>
+            <NextSeo
+                title="Clínica Gerar | Contato"
+                description="Estamos prontos para lhe atender."
+                openGraph={{
+                    url: 'https://clinicageraritz.com.br/contact',
+                    title: 'Clínica Gerar | Contato',
+                    description: 'Somos especialistas em Obstetrícia, Ginecologia e Reprodução Humana Assistida.',
+                    images: [
+                        {
+                            url: 'https://clinicageraritz.com.br/assets/images/capa-contato.jpg',
+                            alt: 'Clínica Gerar Contato',
+                        },
+                        { url: 'https://clinicageraritz.com.br/assets/images/capa-contato.jpg' },
+                    ],
+                }}
+            />
+
+            <BreadcrumbJsonLd
+                itemListElements={[
+                    {
+                        position: 1,
+                        name: 'Início',
+                        item: 'https://clinicageraritz.com.br',
+                    },
+                    {
+                        position: 2,
+                        name: 'Contato',
+                        item: 'https://clinicageraritz.com.br/contact',
+                    },
+                ]}
+            />
+
             <PageTop backgroundImage="/assets/images/capa-contato.jpg" isBackgroundCenter title="Contato" />
 
             <article>

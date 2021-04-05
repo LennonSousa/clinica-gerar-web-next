@@ -106,13 +106,13 @@ function Footer() {
                         <Col>
                             <Row className="justify-content-center">
                                 <Col sm={2}>
-                                    <Link href="/">
+                                    <Link href="/terms">
                                         <a className={styles.footerBottomLink}><p>Termos de uso</p></a>
                                     </Link>
                                 </Col>
 
                                 <Col sm={2}>
-                                    <Link href="/">
+                                    <Link href="/terms">
                                         <a className={styles.footerBottomLink}><p>Notificação de privacidade</p></a>
                                     </Link>
                                 </Col>

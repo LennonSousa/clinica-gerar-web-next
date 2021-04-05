@@ -48,6 +48,16 @@ h4, h5 {
     color: #a7a7a7 !important;
 }
 
+.terms-card {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    z-index: 999;
+    -webkit-box-shadow: 2px 2px 9px -4px #747474;
+    -moz-box-shadow: 2px 2px 9px -4px #747474;
+    box-shadow: 2px 2px 9px -4px #747474;
+}
+
 .carousel-indicators {
     bottom: 20px !important;
 }
