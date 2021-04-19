@@ -3,7 +3,7 @@
   "version": "0.2.5",
   "private": true,
   "scripts": {
-    "start": "next start",
+    "start": "NODE_ENV=production node server",
     "dev": "next dev",
     "build": "next build",
     "postinstall": "next build"
@@ -11,6 +11,7 @@
   "dependencies": {
     "bootstrap": "^4.6.0",
     "emailjs-com": "^2.6.4",
+    "express": "^4.17.1",
     "formik": "^2.2.6",
     "js-cookie": "^2.2.1",
     "next": "10.0.9",

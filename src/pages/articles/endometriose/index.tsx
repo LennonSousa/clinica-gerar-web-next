@@ -143,7 +143,7 @@ function Endometriose() {
 
                             <Row className="justify-content-center mb-5">
                                 <Col>
-                                    <Image fluid rounded src="/assets/images/articles/endometriose-tratamento-01.jpg" alt="Tratamento cirúrgico da Endometriose" />
+                                    <Image fluid rounded src="/assets/images/articles/endometriose-tratamento-02.jpg" alt="Tratamento cirúrgico da Endometriose" />
                                 </Col>
                             </Row>
                         </Col>
