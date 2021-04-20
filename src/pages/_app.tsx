@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Card, Row, Col } from 'react-bootstrap';
 import Cookies from 'js-cookie';
-import { DefaultSeo, LogoJsonLd, LocalBusinessJsonLd, CorporateContactJsonLd, SocialProfileJsonLd } from 'next-seo';
+import { DefaultSeo, NextSeo, LogoJsonLd, LocalBusinessJsonLd, CorporateContactJsonLd, SocialProfileJsonLd } from 'next-seo';
 
 import SEO from '../data/next-seo-config';
 import PageHeader from '../components/PageHeader';
@@ -39,6 +39,8 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <DefaultSeo {...SEO} />
+
+      <NextSeo canonical="https://clinicageraritz.com.br/" />
 
       <LogoJsonLd
         logo="https://clinicageraritz.com.br/assets/images/clinica-gerar-logo.png"

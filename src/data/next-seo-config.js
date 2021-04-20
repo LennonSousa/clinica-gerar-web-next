@@ -1,5 +1,4 @@
 export default {
-    canonical="https://clinicageraritz.com.br/",
     openGraph: {
         type: 'website',
         locale: 'pt_BR',
