@@ -38,7 +38,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                         <Navbar.Brand>
                             <img
                                 src="/assets/images/logo-horizontal-branco.svg"
-                                height="60"
+                                height="40"
                                 className="d-inline-block align-top"
                                 alt="Clínica Gerar Imperatriz"
                             />
