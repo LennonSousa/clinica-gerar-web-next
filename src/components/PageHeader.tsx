@@ -140,7 +140,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                                 <a
                                     className={`nav-link ${activeLink === "/our-services" ? styles.navHeaderLinkActive : styles.navHeaderLink}`}
                                     title="Nossos serviços"
-                                    data-title="Nossos Serviçõs">NOSSOS SERVIÇOS</a>
+                                    data-title="Nossos Serviços">NOSSOS SERVIÇOS</a>
                             </Link>
                             <Link href="/contact">
                                 <a
