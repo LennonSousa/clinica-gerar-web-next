@@ -1,7 +1,8 @@
 export default {
+    canonical="https://clinicageraritz.com.br/",
     openGraph: {
         type: 'website',
-        locale: 'pt_br',
+        locale: 'pt_BR',
         url: 'https://clinicageraritz.com.br/',
         site_name: 'Clínica Gerar Imperatriz',
     },

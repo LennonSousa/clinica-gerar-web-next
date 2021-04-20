@@ -40,7 +40,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                                 src="/assets/images/logo-horizontal-branco.svg"
                                 height="60"
                                 className="d-inline-block align-top"
-                                alt="Clínica Gerar"
+                                alt="Clínica Gerar Imperatriz"
                             />
                         </Navbar.Brand>
                     </Link>
@@ -50,7 +50,12 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                                 <Col>
                                     <Row>
                                         <Col className={styles.navContactContainerLink}>
-                                            <Nav.Link href="https://api.whatsapp.com/send?phone=+5599991091718" rel="noopener noreferrer" target="_blank"><FaWhatsapp size={24} /> {` `} 99 99109-1718</Nav.Link>
+                                            <Nav.Link
+                                            href="https://api.whatsapp.com/send?phone=+5599991091718"
+                                            rel="noopener noreferrer"
+                                            target="_blank"
+                                            title="Marcar com Dr. Evaldo Reis Silva"
+                                            ><FaWhatsapp size={24} /> {` `} 99 99109-1718</Nav.Link>
                                         </Col>
                                     </Row>
                                     <Row>
@@ -63,7 +68,12 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                                 <Col>
                                     <Row>
                                         <Col className={styles.navContactContainerLink}>
-                                            <Nav.Link href="https://api.whatsapp.com/send?phone=+5599988090998" rel="noopener noreferrer" target="_blank"><FaWhatsapp size={24} /> {` `} 99 98809-0998</Nav.Link>
+                                            <Nav.Link
+                                            href="https://api.whatsapp.com/send?phone=+5599988090998"
+                                            rel="noopener noreferrer"
+                                            target="_blank"
+                                            title="Marcar com Dra. Cristina Célia"
+                                            ><FaWhatsapp size={24} /> {` `} 99 98809-0998</Nav.Link>
                                         </Col>
                                     </Row>
                                     <Row>
@@ -103,7 +113,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                                 src="/assets/images/logo-horizontal-branco.svg"
                                 height="30"
                                 className="align-top"
-                                alt="Clínica Gerar"
+                                alt="Clínica Gerar Imperatriz"
                             />
                         </Navbar.Brand>
                     </Link>
@@ -115,16 +125,28 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                     <Navbar.Collapse className="justify-content-center" id="basic-navbar-nav">
                         <Nav>
                             <Link href="/">
-                                <a className={`nav-link ${activeLink === "/" ? styles.navHeaderLinkActive : styles.navHeaderLink}`}>INÍCIO</a>
+                                <a
+                                    className={`nav-link ${activeLink === "/" ? styles.navHeaderLinkActive : styles.navHeaderLink}`}
+                                    title="A Clínica"
+                                    data-title="A Clínica">INÍCIO</a>
                             </Link>
                             <Link href="/about">
-                                <a className={`nav-link ${activeLink === "/about" ? styles.navHeaderLinkActive : styles.navHeaderLink}`}>SOBRE NÓS</a>
+                                <a
+                                    className={`nav-link ${activeLink === "/about" ? styles.navHeaderLinkActive : styles.navHeaderLink}`}
+                                    title="Sobre nós"
+                                    data-title="Sobre nós">SOBRE NÓS</a>
                             </Link>
                             <Link href="/our-services">
-                                <a className={`nav-link ${activeLink === "/our-services" ? styles.navHeaderLinkActive : styles.navHeaderLink}`}>NOSSOS SERVIÇOS</a>
+                                <a
+                                    className={`nav-link ${activeLink === "/our-services" ? styles.navHeaderLinkActive : styles.navHeaderLink}`}
+                                    title="Nossos serviços"
+                                    data-title="Nossos Serviçõs">NOSSOS SERVIÇOS</a>
                             </Link>
                             <Link href="/contact">
-                                <a className={`nav-link ${activeLink === "/contact" ? styles.navHeaderLinkActive : styles.navHeaderLink}`}>CONTATO</a>
+                                <a
+                                    className={`nav-link ${activeLink === "/contact" ? styles.navHeaderLinkActive : styles.navHeaderLink}`}
+                                    title="Contato"
+                                    data-title="Contato">CONTATO</a>
                             </Link>
 
                             <div className={styles.navBottomLinksContainer}>

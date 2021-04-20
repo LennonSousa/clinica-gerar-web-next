@@ -1,8 +1,35 @@
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import { NextSeo, BreadcrumbJsonLd } from 'next-seo';
 
 function Endometriose() {
 
     return (
+        <>
+        <NextSeo
+                title="Clínica Gerar | Termos de uso"
+                description="Conheça os nossos termos de uso e políticas de privacidade."
+                openGraph={{
+                    url: 'https://clinicageraritz.com.br/contact',
+                    title: 'Clínica Gerar | Termos de uso',
+                    description: 'Conheça os nossos termos de uso e políticas de privacidade.'
+                }}
+            />
+
+            <BreadcrumbJsonLd
+                itemListElements={[
+                    {
+                        position: 1,
+                        name: 'Início',
+                        item: 'https://clinicageraritz.com.br',
+                    },
+                    {
+                        position: 2,
+                        name: 'Termos de uso',
+                        item: 'https://clinicageraritz.com.br/terms',
+                    },
+                ]}
+            />
+            
         <article>
             <Container>
             <Row className="mt-5">
@@ -250,6 +277,7 @@ function Endometriose() {
                 </Row>
             </Container>
         </article>
+        </>
     );
 }
 

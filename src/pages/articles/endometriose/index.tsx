@@ -27,7 +27,6 @@ function Endometriose() {
                             url: 'https://clinicageraritz.com.br/assets/images/articles/endometriose-01.jpg',
                             alt: 'Endometriose',
                         },
-                        { url: 'https://clinicageraritz.com.br/assets/images/articles/endometriose-01.jpg' },
                     ],
                 }}
             />

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Container, Row, Col, Carousel, Image, Modal, Button } from 'react-bootstrap';
 import { FaRegEnvelope, FaWhatsapp, FaArrowRight } from 'react-icons/fa';
-import { NextSeo } from 'next-seo';
+import { NextSeo, SiteLinksSearchBoxJsonLd } from 'next-seo';
 
 import OurService from '../components/OurServices';
 import Members from '../components/Members';
@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Clínica Gerar"
+        title="Clínica Gerar Imperatriz | Marque a sua consulta"
         description="A Clínica Gerar de Imperatriz a mais de década oferece serviços especializados em Ginecologia, Obstetrícia, Medicina Fetal, Reprodução Humana."
         openGraph={{
           url: 'https://clinicageraritz.com.br',
@@ -33,9 +33,12 @@ export default function Home() {
           images: [
             {
               url: 'https://clinicageraritz.com.br/assets/images/visit-us/atendimento.jpg',
-              alt: 'Og Image Alt',
+              alt: 'Atendimendo na Clínica Gerar Imperatriz',
             },
-            { url: 'https://clinicageraritz.com.br/assets/images/visit-us/atendimento.jpg' },
+            {
+              url: 'https://clinicageraritz.com.br/assets/images/visit-us/medicos.jpg',
+              alt: "Dr Evaldo e Dra Cristina na Clínica Gerar Imperatriz"
+            },
           ],
         }}
       />
@@ -244,7 +247,7 @@ export default function Home() {
               <Link
                 href='/articles/endometriose'
               >
-                <a>
+                <a title="Endometriose">
                   Saber mais <FaArrowRight size={18} />
                 </a>
               </Link>

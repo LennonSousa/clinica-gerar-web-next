@@ -32,6 +32,7 @@ function Footer() {
                                     href="https://www.instagram.com/clinicagerar/"
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    title="Visite o nosso Instagram"
                                 >
                                     <h6><FaInstagram size={24}
                                     /> @clinicagerar</h6></a>
@@ -50,6 +51,7 @@ function Footer() {
                                     href="https://api.whatsapp.com/send?phone=+5599991091718"
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    title="Nosso WhatsApp"
                                 >
                                     <h6><FaWhatsapp size={24}
                                     /> 99 98798-4898</h6></a>
@@ -61,7 +63,7 @@ function Footer() {
                         <Row>
                             <Col>
                                 <Link href="/our-services">
-                                    <a>
+                                    <a title="Nossos Serviços">
                                         <h5 className={styles.footerSectionTitle}>Serviços</h5>
                                     </a>
                                 </Link>
@@ -107,13 +109,13 @@ function Footer() {
                             <Row className="justify-content-center">
                                 <Col sm={2}>
                                     <Link href="/terms">
-                                        <a className={styles.footerBottomLink}><p>Termos de uso</p></a>
+                                        <a title="Termos de uso" className={styles.footerBottomLink}><p>Termos de uso</p></a>
                                     </Link>
                                 </Col>
 
                                 <Col sm={2}>
                                     <Link href="/terms">
-                                        <a className={styles.footerBottomLink}><p>Notificação de privacidade</p></a>
+                                        <a title="Políticas de privacidade" className={styles.footerBottomLink}><p>Notificação de privacidade</p></a>
                                     </Link>
                                 </Col>
                             </Row>

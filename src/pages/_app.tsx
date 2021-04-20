@@ -71,6 +71,7 @@ function MyApp({ Component, pageProps }) {
           'https://clinicageraritz.com.br/assets/images/visit-us/sala-procedimentos.jpg',
           'https://clinicageraritz.com.br/assets/images/visit-us/ultrassom.jpg',
         ]}
+        priceRange='300'
         openingHours={[
           {
             opens: '08:00',
