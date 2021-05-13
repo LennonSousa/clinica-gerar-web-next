@@ -134,6 +134,9 @@ function Contact() {
                                             <Col>
                                                 <p>cliente@clinicageraritz.com.br</p>
                                                 <p>financeiro@clinicageraritz.com.br</p>
+                                                <br />
+                                                <br />
+                                                <br />
                                             </Col>
                                         </Row>
                                     </Col>
@@ -254,6 +257,7 @@ function Contact() {
                                                         value={values.message}
                                                         name="message"
                                                         isInvalid={!!errors.message}
+                                                        style={{ resize: 'none' }}
                                                     />
                                                     <Form.Control.Feedback type="invalid">{errors.message}</Form.Control.Feedback>
                                                 </Form.Group>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Container, Navbar, Nav, Row, Col, Modal, Button, Image } from 'react-bootstrap';
-import { FaWhatsapp, FaRegCalendarAlt } from 'react-icons/fa';
+import { FaPhoneAlt, FaWhatsapp, FaRegCalendarAlt } from 'react-icons/fa';
 
 import styles from '../styles/components/PageHeader.module.css';
 
@@ -51,10 +51,25 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                                     <Row>
                                         <Col className={styles.navContactContainerLink}>
                                             <Nav.Link
-                                            href="https://api.whatsapp.com/send?phone=+5599991091718"
-                                            rel="noopener noreferrer"
-                                            target="_blank"
-                                            title="Marcar com Dr. Evaldo Reis Silva"
+                                                title="Telefone da Clínica Gerar Imperatriz"
+                                            ><FaPhoneAlt size={24} /> {` `} 99 3072-9525</Nav.Link>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col className={styles.navContactContainerText}>
+                                            Clínica Gerar
+                                        </Col>
+                                    </Row>
+                                </Col>
+
+                                <Col>
+                                    <Row>
+                                        <Col className={styles.navContactContainerLink}>
+                                            <Nav.Link
+                                                href="https://api.whatsapp.com/send?phone=+5599991091718"
+                                                rel="noopener noreferrer"
+                                                target="_blank"
+                                                title="Marcar com Dr. Evaldo Reis Silva"
                                             ><FaWhatsapp size={24} /> {` `} 99 99109-1718</Nav.Link>
                                         </Col>
                                     </Row>
@@ -69,16 +84,16 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                                     <Row>
                                         <Col className={styles.navContactContainerLink}>
                                             <Nav.Link
-                                            href="https://api.whatsapp.com/send?phone=+5599988090998"
-                                            rel="noopener noreferrer"
-                                            target="_blank"
-                                            title="Marcar com Dra. Cristina Célia"
+                                                href="https://api.whatsapp.com/send?phone=+5599988090998"
+                                                rel="noopener noreferrer"
+                                                target="_blank"
+                                                title="Marcar com Dra. Cristina Célia"
                                             ><FaWhatsapp size={24} /> {` `} 99 98809-0998</Nav.Link>
                                         </Col>
                                     </Row>
                                     <Row>
                                         <Col className={styles.navContactContainerText}>
-                                            Dra. Cristina Célia Andrade
+                                            Dra. Cristina Célia
                                         </Col>
                                     </Row>
                                 </Col>
@@ -96,7 +111,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                 </Container>
             </Navbar>
 
-            <Navbar className={styles.navContainerBottom}
+            <Navbar collapseOnSelect className={styles.navContainerBottom}
                 style={{
                     backgroundColor: show ? 'rgba(0, 58, 60, 1)' : 'rgba(0, 58, 60, 0.8)',
                     boxShadow: show ? 'none' : 'rgb(0 0 0 / 31%) 0px 4px 11px 2px'
@@ -124,37 +139,60 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
 
                     <Navbar.Collapse className="justify-content-center" id="basic-navbar-nav">
                         <Nav>
-                            <Link href="/">
-                                <a
+                            <Link passHref href="/">
+                                <Nav.Link
                                     className={`nav-link ${activeLink === "/" ? styles.navHeaderLinkActive : styles.navHeaderLink}`}
                                     title="A Clínica"
-                                    data-title="A Clínica">INÍCIO</a>
+                                    data-title="A Clínica">INÍCIO</Nav.Link>
                             </Link>
-                            <Link href="/about">
-                                <a
+                            <Link passHref href="/about">
+                                <Nav.Link
                                     className={`nav-link ${activeLink === "/about" ? styles.navHeaderLinkActive : styles.navHeaderLink}`}
                                     title="Sobre nós"
-                                    data-title="Sobre nós">SOBRE NÓS</a>
+                                    data-title="Sobre nós">SOBRE NÓS</Nav.Link>
                             </Link>
-                            <Link href="/our-services">
-                                <a
+                            <Link passHref href="/our-services">
+                                <Nav.Link
                                     className={`nav-link ${activeLink === "/our-services" ? styles.navHeaderLinkActive : styles.navHeaderLink}`}
                                     title="Nossos serviços"
-                                    data-title="Nossos Serviços">NOSSOS SERVIÇOS</a>
+                                    data-title="Nossos Serviços">NOSSOS SERVIÇOS</Nav.Link>
                             </Link>
-                            <Link href="/contact">
-                                <a
+                            <Link passHref href="/contact">
+                                <Nav.Link
                                     className={`nav-link ${activeLink === "/contact" ? styles.navHeaderLinkActive : styles.navHeaderLink}`}
                                     title="Contato"
-                                    data-title="Contato">CONTATO</a>
+                                    data-title="Contato">CONTATO</Nav.Link>
                             </Link>
 
                             <div className={styles.navBottomLinksContainer}>
                                 <Row>
-                                    <Col className="mt-3" sm={4}>
+                                    <Col className="mt-3" sm={3}>
                                         <Row>
                                             <Col className={styles.navContactContainerLink}>
-                                                <Nav.Link href="https://api.whatsapp.com/send?phone=+5599991091718" rel="noopener noreferrer" target="_blank"><FaWhatsapp size={24} /> {` `} 99 99109-1718</Nav.Link>
+                                                <Nav.Link
+                                                    title="Telefone da Clínica Gerar Imperatriz"
+                                                >
+                                                    <FaPhoneAlt size={24} /> {` `} 99 3072-9525
+                                                </Nav.Link>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col className={styles.navContactContainerText}>
+                                                Clínica Gerar
+                                        </Col>
+                                        </Row>
+                                    </Col>
+
+                                    <Col className="mt-3" sm={3}>
+                                        <Row>
+                                            <Col className={styles.navContactContainerLink}>
+                                                <Nav.Link
+                                                    href="https://api.whatsapp.com/send?phone=+5599991091718"
+                                                    rel="noopener noreferrer"
+                                                    target="_blank"
+                                                >
+                                                    <FaWhatsapp size={24} /> {` `} 99 99109-1718
+                                                </Nav.Link>
                                             </Col>
                                         </Row>
                                         <Row>
@@ -164,10 +202,16 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                                         </Row>
                                     </Col>
 
-                                    <Col className="mt-3" sm={4}>
+                                    <Col className="mt-3" sm={3}>
                                         <Row>
                                             <Col className={styles.navContactContainerLink}>
-                                                <Nav.Link href="https://api.whatsapp.com/send?phone=+5599988090998" rel="noopener noreferrer" target="_blank"><FaWhatsapp size={24} /> {` `} 99 98809-0998</Nav.Link>
+                                                <Nav.Link
+                                                    href="https://api.whatsapp.com/send?phone=+5599988090998"
+                                                    rel="noopener noreferrer"
+                                                    target="_blank"
+                                                >
+                                                    <FaWhatsapp size={24} /> {` `} 99 98809-0998
+                                                </Nav.Link>
                                             </Col>
                                         </Row>
                                         <Row>
@@ -177,10 +221,14 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                                         </Row>
                                     </Col>
 
-                                    <Col className="mt-3" sm={4}>
+                                    <Col className="mt-3" sm={3}>
                                         <Row>
                                             <Col className={styles.navContactContainerLink}>
-                                                <Nav.Link onClick={handleShow} ><FaRegCalendarAlt size={24} /> {` `} Horário de atendimento</Nav.Link>
+                                                <Nav.Link
+                                                    onClick={handleShow}
+                                                >
+                                                    <FaRegCalendarAlt size={24} /> {` `} Horário de atendimento
+                                                </Nav.Link>
                                             </Col>
                                         </Row>
                                     </Col>
@@ -197,7 +245,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ activeLink }) => {
                 </Modal.Header>
                 <Modal.Body>
                     <Row className="mt-4 mb-4 justify-content-center align-items-center text-center">
-                        <Col sm={5}>
+                        <Col className="col-8" sm={6}>
                             <Image fluid src="/assets/images/undraw_Work_time_re_hdyv.svg" alt="Horário de funcionamento" />
                         </Col>
 
